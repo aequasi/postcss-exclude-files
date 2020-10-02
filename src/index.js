@@ -22,7 +22,7 @@ const getValueType: (any) => {
   }
 }
 
-export default postcss.plugin('postcss-exclude-files', opts => {
+module.exports = postcss.plugin('postcss-exclude-files', opts => {
   const { filter, plugins } = opts
 
   if (!getValueType(filter)

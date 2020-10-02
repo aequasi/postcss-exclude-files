@@ -1,17 +1,12 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
 var _postcss = _interopRequireDefault(require("postcss"));
 
 var _multimatch = _interopRequireDefault(require("multimatch"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var ERROR_PLUGIN_TYPE = 'The plugins parameter must be function or object or Array';
 var ERROR_FILTER_ERROR = 'The filter parameter must be a glob string or an array of glob strings';
@@ -37,7 +32,7 @@ var getValueType = function getValueType(value) {
   };
 };
 
-var _default = _postcss.default.plugin('postcss-exclude-files', function (opts) {
+module.exports = _postcss.default.plugin('postcss-exclude-files', function (opts) {
   var filter = opts.filter,
       plugins = opts.plugins;
 
@@ -65,5 +60,3 @@ var _default = _postcss.default.plugin('postcss-exclude-files', function (opts) 
     }
   };
 });
-
-exports.default = _default;
